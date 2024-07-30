@@ -5,19 +5,21 @@ import { Modulo } from '../components/modulo'
 import { useAppSelector } from '../store'
 
 export function Player() {
-  const { modules } = useAppSelector((state) => (
+  const { modules, current } = useAppSelector((state) => (
     {
-      modules: state.player.course.modules
+      modules: state.player.course.modules,
+      current: state.player.currentIndex
     }
   ))
+  const { lesson, module } = current
 
   return (
     <div className="bg-zinc-950 text-zinc-50 flex justify-center items-center py-8 h-screen">
       <div className="felx w-[1240px] flex-col gap-6">
         <div className="flex items-center justify-between ">
           <Header
-            title='Fundamentos do Redux'
-            description='Modulo: Desvendando o Redux'
+            title={modules[module].lessons[lesson].title}
+            description={`Modulo: ${modules[module].title}`}
           />
           <button
             className='flex items-center text-sm font-medium text-white gap-2 rounded bg-violet-500 px-3 py-2 hover:bg-violet-600'
