@@ -28,7 +28,7 @@ export function Player() {
         </div>
         <main className='relative flex overflow-hidden rounded-lg border border-zinc-800 bg-zinc-900 shadow pr-80'>
           <div className='flex-1'>
-            <Video url='https://www.youtube.com/watch?v=vCy75f6rq8o' />
+            <Video />
           </div>
           <aside className='absolute top-0 right-0 divide-y-2 divide-zinc-900 bottom-0 w-80 border-l border-zinc-800 bg-zinc-900 overflow-y-auto scrollbar-thin scrollbar-track-zinc-950 scrollbar-thumb-zinc-800'>
             {modules.map(({ id, lessons, title }, index) => (
