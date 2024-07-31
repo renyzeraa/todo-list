@@ -20,7 +20,7 @@ export function Modulo({ amountLessons, title, moduleIndex }: ModuloProps) {
   const dispatch = useDispatch()
 
   return (
-    <Collapsible.Root className="group">
+    <Collapsible.Root className="group" defaultOpen={moduleIndex === 0}>
       <Collapsible.Trigger asChild>
         <button className='flex w-full items-center bg-zinc-800 gap-3 p-4'>
           <span className='flex h-10 w-10 rounded-full items-center justify-center bg-zinc-950 text-xs'>
