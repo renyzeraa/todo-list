@@ -21,9 +21,10 @@ export function Player() {
     dispatch(loadCourse())
   }, [])
 
+
   useEffect(() => {
     document.title = `Assistindo: ${modules ? modules[currentModuleIndex].lessons[currentLessonIndex].title : 'Nenhum vídeo...'}`
-  }, [currentLessonIndex])
+  }, [modules])
 
   return (
     <div className="bg-zinc-950 text-zinc-50 flex justify-center items-center py-8 h-screen">
